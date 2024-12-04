@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.dropdown-toggle::after {
+  display: none !important; 
+}
+
+
