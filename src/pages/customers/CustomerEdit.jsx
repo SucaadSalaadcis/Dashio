@@ -183,7 +183,7 @@ export default function CustomerEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: fullname === '' && err ? 'red' : '', // Apply red border only when fullname is empty and err is true
+                                                        borderColor: fullname === '' && err ? 'red' : '',
                                                     },
                                                 },
                                             }}
@@ -200,7 +200,7 @@ export default function CustomerEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: phoneError ? 'red' : '', // Default border color
+                                                        borderColor: phoneError ? 'red' : '',
                                                     },
                                                 },
                                             }}
@@ -220,19 +220,12 @@ export default function CustomerEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: address == '' && err ? 'red' : '', // Default border color
+                                                        borderColor: address == '' && err ? 'red' : '',
                                                     },
                                                 },
                                             }}
                                         />
 
-                                        {/* <TextField
-                                            required
-                                            id="outlined-required"
-                                            label="Agency ID"
-                                            value={agency_id}
-                                            onChange={(e) => setagency_id(e.target.value)}
-                                        /> */}
                                         <div>
                                             <label htmlFor="Agency_id" className='mb-2'>Agency ID </label>
                                             <Select
@@ -259,7 +252,7 @@ export default function CustomerEdit() {
                                             />
                                         </div>
 
-                                      
+
                                     </FormControl>
                                 )}
                             <Box display="flex" justifyContent="flex-end" mt={2}>

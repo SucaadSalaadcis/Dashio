@@ -25,8 +25,12 @@ import axiosPublicURL from '../../../src/hooks/AxiosHook';
 import OrderPost from './OrderPost';
 
 
+import useLanguage from '../../reusible/useLanguage';
+
 
 export default function Orders() {
+
+  const { t } = useLanguage();
 
   const useAxios = axiosPublicURL();
   const [currentPage, setCurrentPage] = useState(1);
@@ -132,7 +136,7 @@ export default function Orders() {
       style={{ overflowX: "auto", backgroundColor: "white", padding: "20px", borderRadius: "10px" }}
     >
       <div className='flex justify-between'>
-        <h3>Orders</h3>
+        <h3>{t('order')}</h3>
         <OrderPost handleRefreshData={handleAllData} />
       </div>
 
@@ -194,7 +198,7 @@ export default function Orders() {
                   <td className='text-start'>{order.agent && order.agent[0] ? order.agent[0].fullname : <p style={{ color: 'red' }}> Not Assigned</p>}</td>
                   <td className='text-start'>{order.product_price && order.product_price.price ? order.product_price.price : <p style={{ color: 'red' }}> Not Assigned</p>}</td>
                   <td className='text-start' >{order.product_commission && order.product_commission.commission ? order.product_commission.commission : 'Not Assigned'}</td>
-                  {/* <td >{order.status_label ? order.status_label : 'Not Assigned'}</td> */}
+                
                   <td className='text-start' style={{ color: order.status_label == 'UnPaid' ? 'red' : '' }}>{order.status_label ? order.status_label : 'Not Assigned'}</td>
 
                   {/* actions */}
@@ -236,82 +240,3 @@ export default function Orders() {
   )
 }
 
-
-
-
-// ///
-
-// <table id="example"
-//   className="table mt-3"
-//   style={{ width: "100%", tableLayout: "auto" }}
-// >
-//   <thead>
-//     <tr>
-//       <th>Product</th>
-//       <th>Customer</th>
-//       <th>Agent</th>
-//       <th>Product Price</th>
-//       <th>Product Commission</th>
-//       <th>Status</th>
-//       <th>Actions</th>
-
-//     </tr>
-//   </thead>
-//   <tbody>
-//     {loading ? (
-//       <tr>
-//         <td colSpan={7} style={{ textAlign: 'center', height: '100px', verticalAlign: 'middle' }}>
-//           <GridLoader color="#007BFF" loading={loading} size={15} />
-//         </td>
-//       </tr>
-
-//     ) : (
-
-//       ordersData.map((order, index) => (
-//         <tr key={index}>
-//           <td>{order.product && order.product.name ? order.product.name : 'Not Assigned'}</td>
-//           <td>{order.customer && order.customer[0] ? order.customer[0].fullname : 'Not Assigned'}</td>
-//           <td>{order.agent && order.agent[0] ? order.agent[0].fullname : 'Not Assigned'}</td>
-//           <td>{order.product_price && order.product_price.price ? order.product_price.price : 'Not Assigned'}</td>
-//           <td>{order.product_commission && order.product_commission.commission ? order.product_commission.commission : 'Not Assigned'}</td>
-//           <td>{order.status_label ? order.status_label : 'Not Assigned'}</td>
-
-//           {/* actions */}
-//           {/*  */}
-//           <td className='text-end' >
-//             <Dropdown size="sm">
-//               <Dropdown.Toggle variant="" id="" className='border-0'>
-//                 <MoreHorizIcon />
-//               </Dropdown.Toggle>
-
-//               <Dropdown.Menu>
-//                 <Dropdown.Item href="#">
-
-//                   {/*  view component*/}
-//                   <View veiwParam={order.id} />
-
-//                   {/* <h6>View</h6> */}
-//                 </Dropdown.Item>
-//                 <Dropdown.Item href="#">
-//                   {/* edit component */}
-//                   <Edit EditParam={order.id} />
-//                   {/* <h6>Edit</h6> */}
-//                 </Dropdown.Item>
-//                 <Dropdown.Item href="#">
-
-//                   <p style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}
-//                     onClick={() => handleDelete(order.id)} >Delete</p>
-
-//                   {/* <h6>Delete</h6> */}
-//                 </Dropdown.Item>
-//               </Dropdown.Menu>
-//             </Dropdown>
-
-
-//           </td>
-//         </tr>
-//       ))
-//     )}
-
-//   </tbody>
-// </table>

@@ -208,8 +208,7 @@ export default function OrderPost({ handleRefreshData }) {
 
                         <div class="container-fluid py-4">
                             <div class="row">
-                                {/* <div class="col-lg-8 col-md-10 mx-auto"> */}
-                                {/* content page */}
+                             
 
                                 {/* content page */}
                                 <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Order Post Form</Typography>
@@ -302,7 +301,7 @@ export default function OrderPost({ handleRefreshData }) {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgPro_id ? 'red' : '', // Default border color when there's an error
+                                                    borderColor: errmsgPro_id ? 'red' : '', 
                                                 },
                                             },
                                         }}
@@ -333,7 +332,7 @@ export default function OrderPost({ handleRefreshData }) {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgStatus ? 'red' : '', // Default border color when there's an error
+                                                    borderColor: errmsgStatus ? 'red' : '', 
                                                 },
                                             },
                                         }}
@@ -345,7 +344,7 @@ export default function OrderPost({ handleRefreshData }) {
                                     }
                                 </FormControl>
 
-                                {/* </div> */}
+                            
                             </div>
 
                         </div>

@@ -86,7 +86,7 @@ export default function ProductPost() {
             setErr(true);
 
         }).finally(_ => {
-            setActiveBtn(true); // Re-enable after request is complete
+            setActiveBtn(true); 
         })
     }
 
@@ -175,7 +175,7 @@ export default function ProductPost() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: errmsgCo ? 'red' : '', // Set red border if there's an error
+                                                        borderColor: errmsgCo ? 'red' : '',
                                                     },
                                                 },
                                             }}

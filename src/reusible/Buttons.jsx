@@ -1,11 +1,13 @@
 
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import icon2 from '../assets/img/icon2.png'
+import ico2 from '../assets/img/1.avif'
 import icon3 from '../assets/img/icon3.png'
 import icon4 from '../assets/img/icon4.png'
-import LanguageIcon from '@mui/icons-material/Language';
 
+
+import Cookies from 'js-cookie'
 
 // traslation
 import i18n from "i18next";
@@ -15,6 +17,13 @@ import useLanguage from './useLanguage';
 
 export default function Buttons() {
 
+
+
+
+    const getCookie = Cookies.get('i18next');
+    console.log(getCookie)
+
+
     const { t } = useLanguage();
 
     return (
@@ -22,7 +31,18 @@ export default function Buttons() {
 
             <div class="dropdown">
                 <a class="btn border-0  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <LanguageIcon className='text-[#3A57E8]' style={{ fontSize: '30px' }} />
+
+                    <div >
+                        {
+                            getCookie == 'en' ? <img src={ico2} width={'45px'} />
+                                : getCookie == 'so' ? <img src={icon3} style={{ width: '30px', height: '30px', borderRadius: '50%' }} />
+                                    : getCookie == 'ar' ? <img src={icon4} style={{ width: '30px', height: '30px', borderRadius: '50%' }} />
+                                        : ''
+                        }
+
+                    </div>
+
+
                 </a>
 
                 <ul class="dropdown-menu" >

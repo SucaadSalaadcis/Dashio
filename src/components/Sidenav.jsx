@@ -252,11 +252,21 @@ const Sidenav = ({ children }) => {
 
 
                                 <Typography variant="h6" className="ml-4 text-black lg:block">
-                                    {mainMenuItems.map((item) => (location.pathname === item.path ? item.text : ''))}
+                                    {mainMenuItems.map((item) => (
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'gray' }}>
+                                            {location.pathname === item.path && (
+                                                <>
+                                                    {item.icon && <span>{item.activeIcon}</span>}
+                                                    {item.text && <span>{item.text}</span>}
+                                                </>
+                                            )}
+                                        </div>
+
+                                    ))}
                                 </Typography>
                             </div>
                             <div className="flex items-center ">
-                                <Typography sx={{fontSize: '20px'}}>{i18n.language}</Typography>
+                                <Typography sx={{ fontSize: '20px' }}>{i18n.language}</Typography>
                                 <div className="flex items-center ">
                                     <div>
                                         <Buttons />
@@ -264,7 +274,9 @@ const Sidenav = ({ children }) => {
                                     <Typography variant="body1" className="hidden text-black lg:block font">
                                         {t('name')}
                                     </Typography>
-                                    <img src={img1} alt="User" className="w-8 h-8 ml-5 rounded-full" />
+                                    <img src={img1} alt="User" className={` ${i18n.language === 'ar' ? 'mr-5' : 'ml-5'}   w-8 h-8 rounded-full`} 
+                                    
+                                    />
                                 </div>
                             </div>
                         </Toolbar>

@@ -167,7 +167,7 @@ export default function UserEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: password === '' && err ? 'red' : '', // Default border color
+                                                        borderColor: password === '' && err ? 'red' : '',
                                                     },
                                                 },
                                             }}
@@ -181,7 +181,7 @@ export default function UserEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: errmsg ? 'red' : '', // Default border color
+                                                        borderColor: errmsg ? 'red' : '', 
                                                     },
                                                 },
                                             }}

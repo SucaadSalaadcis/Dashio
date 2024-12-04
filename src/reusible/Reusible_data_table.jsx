@@ -92,7 +92,7 @@ const ReusableDataTable = ({ title, columns, url, }) => {
                 paging: false, // Disable DataTables pagination
                 info: false,   // Hide "Showing 1 to 10 of 10 entries" text
                 search: true,
-                language: language, // Use the memoized language object
+                language: language,
             });
         }
     }, [data, language,]); // Ensure the effect runs only when data or language changes
@@ -119,9 +119,6 @@ const ReusableDataTable = ({ title, columns, url, }) => {
     //         });
     //     }
     // }, [data, language]); // Re-run effect when data or language changes
-
-
-
 
 
 

@@ -245,7 +245,7 @@ export default function OrderEdit() {
 
             <div class="container-fluid py-4">
                 <div class="row">
-                    {/* <div class="col-lg-8 col-md-10 mx-auto"> */}
+                  
                     {/* content page */}
                     <Paper elevation={3} style={{ padding: '70px', borderRadius: '8px' }}>
                         <BackIcon pathUrl={'/orders'} />
@@ -321,7 +321,7 @@ export default function OrderEdit() {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgPro_id ? 'red' : '', // Default border color when there's an error
+                                                    borderColor: errmsgPro_id ? 'red' : '',
                                                 },
                                             },
                                         }}
@@ -350,7 +350,7 @@ export default function OrderEdit() {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgStatus ? 'red' : '', // Default border color when there's an error
+                                                    borderColor: errmsgStatus ? 'red' : '', 
                                                 },
                                             },
                                         }}
@@ -375,7 +375,6 @@ export default function OrderEdit() {
 
                     </Paper>
 
-                    {/* </div> */}
                 </div>
 
             </div>

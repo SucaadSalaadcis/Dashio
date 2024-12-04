@@ -44,25 +44,6 @@ export default function UserPost() {
 
 
 
-
-    // if (typeof name === "number") {
-    //     // Convert to string if required by the backend
-    //     return name.toString();
-    // } else if (typeof inputValue === "string") {
-    //     // Convert to number if needed
-    //     const number = Number(inputValue);
-    //     if (isNaN(number)) {
-    //         console.error("Invalid number format");
-    //         return null; // or handle error
-    //     }
-    //     return number;
-    // }
-
-
-
-
-
-
     // post 
     const handlePost = async () => {
         // e.preventDefault();
@@ -73,20 +54,9 @@ export default function UserPost() {
             name,
             email,
             password,
-            // password : typeof password == 'number',
             roles: role.trim() ? [{ id: 1, fullname: role }] : [], // Only include role if it's provided
         };
 
-        // if (typeof password === "string") {
-        //     setErr(true);
-        //     setErrMsg("The Password must be number")
-        //     // Convert to number if needed
-        //     const number = Number(password);
-        //     return number;
-        // } else {
-        //     setErr(false);
-        //     setErrMsg(null);
-        // }
 
 
 
@@ -170,7 +140,7 @@ export default function UserPost() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: err ? 'red' : '', // Default border color when there's an error
+                                                        borderColor: err ? 'red' : '', 
                                                     },
                                                 },
                                             }}
@@ -199,11 +169,6 @@ export default function UserPost() {
                                             value={role}
                                             onChange={(e) => setRole(e.target.value)}
                                         />
-                                        {/* {
-                                            err ? (
-                                                <span className='text-red-600'>{errmsg}</span>
-                                            ) : ''
-                                        } */}
                                     </FormControl>
 
                                 </div>

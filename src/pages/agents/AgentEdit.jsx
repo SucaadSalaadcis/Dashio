@@ -122,7 +122,7 @@ export default function AgentEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: fullname === '' && err ? 'red' : '', // Default border color
+                                                        borderColor: fullname === '' && err ? 'red' : '', 
                                                     },
                                                 },
                                             }}
@@ -137,7 +137,7 @@ export default function AgentEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: description == '' && err ? 'red' : '', // Default border color
+                                                        borderColor: description == '' && err ? 'red' : '', 
                                                     },
                                                 },
                                             }}
@@ -153,7 +153,7 @@ export default function AgentEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: business === '' && err ? 'red' : '', // Default border color
+                                                        borderColor: business === '' && err ? 'red' : '', 
                                                     },
                                                 },
                                             }}

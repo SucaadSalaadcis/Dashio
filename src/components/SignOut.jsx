@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 
 export default function SignOut() {
 
-    const navigate = useNavigate(); // Correctly use the hook inside the component
+    const navigate = useNavigate(); 
 
     const handleLogout = () => {
         // localStorage.clear();

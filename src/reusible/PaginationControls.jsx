@@ -15,8 +15,6 @@ export default function PaginationControls({ currentPage, totalPages, pageS, set
         <>
             <div className="justify-between mt-4 d-flex">
                 <div>
-                    {/* <span className='text-sm md:text-lg'>Showing {currentPage} to {pageS} of {totalPages} entries</span> */}
-                    {/* عرض {currentPage} إلى {pageS} من {totalPages} إدخالًا */}
                     <span className='text-sm md:text-lg'>
                         {t('pagin_text1')} {totalPages} {t('pagin_text2')} {pageS} {t('pagin_text3')} {currentPage} {t('pagin_text4')}   </span>
                 </div>

@@ -81,7 +81,7 @@ function AgentPost() {
             setErr(true);
 
         } finally {
-            setActiveBtn(true); // Re-enable after request is complete
+            setActiveBtn(true);
         }
     };
 
@@ -158,7 +158,7 @@ function AgentPost() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: errmsg ? 'red' : '', // Default border color when there's an error
+                                                        borderColor: errmsg ? 'red' : '', 
                                                     },
                                                 },
                                             }}
