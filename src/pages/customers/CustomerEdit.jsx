@@ -15,8 +15,12 @@ import {
 
 import Select from 'react-select';
 
+import useLanguage from '../../reusible/useLanguage';
+
+
 export default function CustomerEdit() {
 
+    const { t, i18n } = useLanguage();
 
 
     const [fullname, setFullName] = useState("");
@@ -162,7 +166,7 @@ export default function CustomerEdit() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/customers'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>Customer Edit Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22px' }} className='pb-[20px] text-center'>{t('cust_E_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

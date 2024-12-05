@@ -11,9 +11,13 @@ import {
     PacmanLoader
 } from 'react-spinners';
 
+import useLanguage from '../../reusible/useLanguage';
 
 
 export default function AgentEdit() {
+
+    const { t, } = useLanguage();
+
 
     const getToken = () => {
         return Cookies.get('token');
@@ -100,7 +104,7 @@ export default function AgentEdit() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/agents'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>Agent Edit Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22cpx' }} className='pb-[20px] text-center'>{t('agent_E_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>
@@ -122,7 +126,7 @@ export default function AgentEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: fullname === '' && err ? 'red' : '', 
+                                                        borderColor: fullname === '' && err ? 'red' : '',
                                                     },
                                                 },
                                             }}
@@ -137,7 +141,7 @@ export default function AgentEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: description == '' && err ? 'red' : '', 
+                                                        borderColor: description == '' && err ? 'red' : '',
                                                     },
                                                 },
                                             }}
@@ -153,7 +157,7 @@ export default function AgentEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: business === '' && err ? 'red' : '', 
+                                                        borderColor: business === '' && err ? 'red' : '',
                                                     },
                                                 },
                                             }}

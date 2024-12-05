@@ -12,9 +12,13 @@ import {
     PacmanLoader
 } from 'react-spinners';
 
-
+import useLanguage from '../../reusible/useLanguage';
 
 export default function UserEdit() {
+
+    const { t, i18n } = useLanguage();
+  
+
 
     const getToken = () => {
         return Cookies.get('token');
@@ -120,7 +124,7 @@ export default function UserEdit() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/users'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>User Edit Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22px' }} className='pb-[20px] text-center'>{t('user_E_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

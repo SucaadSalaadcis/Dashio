@@ -7,7 +7,13 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import useLanguage from '../../reusible/useLanguage';
+
 function AgentPost() {
+
+    const { t, i18n } = useLanguage();
+    const isRtl = i18n.language === 'ar'; // Check if the language is Arabic
+
     // modal state
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -100,9 +106,26 @@ function AgentPost() {
             </button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Agents</Modal.Title>
+                <Modal.Header
+                    closeButton
+                    style={{
+                        flexDirection: isRtl ? 'row-reverse' : 'row', // Reverse row direction for RTL
+                        justifyContent: 'space-between', // Ensure proper spacing
+                        alignItems: 'center', // Vertically center items
+                    }}
+                >
+                    <Modal.Title
+                        style={{
+                            margin: 0,
+                            textAlign: isRtl ? 'right' : 'left', // Align text direction dynamically
+                            flex: 1, // Take up available space
+                            marginRight: '10px'
+                        }}
+                    >
+                        {t('agent')}
+                    </Modal.Title>
                 </Modal.Header>
+
                 <Modal.Body>
                     <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
                         <div className="py-4 container-fluid">
@@ -113,9 +136,10 @@ function AgentPost() {
                                             fontWeight: 'bold',
                                             marginBottom: '20px',
                                             textAlign: 'center',
+                                            fontSize: '22px'
                                         }}
                                     >
-                                        Agent Post Form
+                                        {t('agent_p_f')}
                                     </Typography>
                                     <FormControl
                                         variant="standard"
@@ -158,7 +182,7 @@ function AgentPost() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: errmsg ? 'red' : '', 
+                                                        borderColor: errmsg ? 'red' : '',
                                                     },
                                                 },
                                             }}

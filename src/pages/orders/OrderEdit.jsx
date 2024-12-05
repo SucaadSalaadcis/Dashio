@@ -22,10 +22,13 @@ import {
 } from "react-spinners";
 
 
+import useLanguage from '../../reusible/useLanguage';
+
 
 export default function OrderEdit() {
 
-
+    const { t, i18n } = useLanguage();
+  
     const getToken = () => Cookies.get('token');
 
     // State management
@@ -250,7 +253,7 @@ export default function OrderEdit() {
                     <Paper elevation={3} style={{ padding: '70px', borderRadius: '8px' }}>
                         <BackIcon pathUrl={'/orders'} />
                         {/* content page */}
-                        <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Order Edit Form</Typography>
+                        <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontSize: '22px' }}>{t('order_E_f')}</Typography>
                         {
                             loading ? (
                                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

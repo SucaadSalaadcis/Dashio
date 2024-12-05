@@ -31,5 +31,20 @@
     "pagin_text2": "to",
     "pagin_text3": "of",
     "pagin_text4": "entries",
-    "search": "search:"
+    "search": "search:",
+    "agent_p_f": "Agent Post Form",
+    "cust_p_f": "Customer Post Form",
+    "order_P_f": "Order Post Form",
+    "product_P_f": "Product Post Form",
+    "user_P_f": "User Post Form",
+    "agent_E_f": "Agent Edit Form",
+    "cust_E_f": "Customer Edit Form",
+    "order_E_f": "Order Edit Form",
+    "product_E_f": "Product Edit Form",
+    "user_E_f": "User Edit Form",
+    "agent_V_f": "Agent View Form",
+    "cust_V_f": "Customer View Form",
+    "order_V_f": "Order View Form",
+    "product_V_f": "Product View Form",
+    "user_V_f": "User View Form"
 }

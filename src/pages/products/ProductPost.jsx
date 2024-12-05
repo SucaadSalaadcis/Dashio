@@ -11,7 +11,15 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import useLanguage from '../../reusible/useLanguage';
+
+
+
 export default function ProductPost() {
+
+    const { t, i18n } = useLanguage();
+    const isRtl = i18n.language === 'ar'; // Check if the language is Arabic
+
 
 
     // modal state
@@ -86,7 +94,7 @@ export default function ProductPost() {
             setErr(true);
 
         }).finally(_ => {
-            setActiveBtn(true); 
+            setActiveBtn(true);
         })
     }
 
@@ -112,8 +120,24 @@ export default function ProductPost() {
             </button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Products</Modal.Title>
+                <Modal.Header
+                    closeButton
+                    style={{
+                        flexDirection: isRtl ? 'row-reverse' : 'row', // Reverse row direction for RTL
+                        justifyContent: 'space-between', // Ensure proper spacing
+                        alignItems: 'center', // Vertically center items
+                    }}
+                >
+                    <Modal.Title
+                        style={{
+                            margin: 0,
+                            textAlign: isRtl ? 'right' : 'left', // Align text direction dynamically
+                            flex: 1, // Take up available space
+                            marginRight: '10px'
+                        }}
+                    >
+                        {t('product')}
+                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -123,7 +147,7 @@ export default function ProductPost() {
                                 <div class="col-lg-8 col-md-10 mx-auto">
 
                                     {/* content page */}
-                                    <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Product Post Form</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontSize: '22px' }}>{t('product_P_f')}</Typography>
                                     <FormControl variant="standard" sx={{ margin: 1, width: "100%", gap: '10px' }} >
                                         <TextField
                                             required

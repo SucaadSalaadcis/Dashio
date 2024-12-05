@@ -15,7 +15,14 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 import qs from 'qs';
 
+import useLanguage from '../../reusible/useLanguage';
+
+
 export default function CustomerPost() {
+
+    const { t, i18n } = useLanguage();
+    const isRtl = i18n.language === 'ar'; // Check if the language is Arabic
+
 
     // modal state
     const [show, setShow] = useState(false);
@@ -147,9 +154,23 @@ export default function CustomerPost() {
             </button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>
-                        Customers
+                <Modal.Header
+                    closeButton
+                    style={{
+                        flexDirection: isRtl ? 'row-reverse' : 'row', // Reverse row direction for RTL
+                        justifyContent: 'space-between', // Ensure proper spacing
+                        alignItems: 'center', // Vertically center items
+                    }}
+                >
+                    <Modal.Title
+                        style={{
+                            margin: 0,
+                            textAlign: isRtl ? 'right' : 'left', // Align text direction dynamically
+                            flex: 1, // Take up available space
+                            marginRight: '10px'
+                        }}
+                    >
+                        {t('cust')}
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -161,7 +182,7 @@ export default function CustomerPost() {
                                 <div class="col-lg-8 col-md-10 mx-auto">
 
                                     {/* content page */}
-                                    <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Customer Post Form</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontSize: '22px' }}>{t('cust_p_f')}</Typography>
                                     <FormControl variant="standard" sx={{ margin: 1, width: "100%", gap: '10px' }} >
 
                                         <TextField

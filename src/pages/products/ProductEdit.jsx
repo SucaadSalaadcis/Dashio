@@ -12,9 +12,14 @@ import {
     PacmanLoader
 } from 'react-spinners';
 
+import useLanguage from '../../reusible/useLanguage';
 
 
 export default function ProductEdit() {
+
+    const { t, i18n } = useLanguage();
+
+
 
     const getToken = () => {
         return Cookies.get('token');
@@ -107,7 +112,7 @@ export default function ProductEdit() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/products'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>Product Edit Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22px' }} className='pb-[20px] text-center'>{t('product_E_f')}</Typography>
                             {loading ? (
                                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>
                                     <PacmanLoader

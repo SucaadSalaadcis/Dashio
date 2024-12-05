@@ -229,7 +229,7 @@ const Sidenav = ({ children }) => {
                                             <Box
                                                 style={{
                                                     position: 'absolute',
-                                                    top: i18n.language == 'ar' ? '10px' : '20px',
+                                                    top: i18n.language == 'ar' ? '10px' : '5px',
                                                     marginBottom: '20px',
                                                     // right: '101%'
                                                     right: isExpanded ? '101%' : '107%'

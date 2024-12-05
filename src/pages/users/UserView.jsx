@@ -7,9 +7,13 @@ import axios from 'axios';
 import BackIcon from '../../reusible/BackIcon';
 import { HashLoader } from 'react-spinners';
 
-
+import useLanguage from '../../reusible/useLanguage';
 
 export default function UserView() {
+
+    const { t, i18n } = useLanguage();
+
+
 
     const getToken = () => {
         return Cookies.get('token');
@@ -62,7 +66,7 @@ export default function UserView() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/users'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>User View Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22px' }} className='pb-[20px] text-center'>{t('user_V_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

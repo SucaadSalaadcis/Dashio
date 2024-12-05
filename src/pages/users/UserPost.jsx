@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import {  FormControl, TextField, Typography } from '@mui/material';
+import { FormControl, TextField, Typography } from '@mui/material';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -12,8 +12,15 @@ import Modal from 'react-bootstrap/Modal';
 
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
+import useLanguage from '../../reusible/useLanguage';
+
 
 export default function UserPost() {
+
+
+    const { t, i18n } = useLanguage();
+    const isRtl = i18n.language === 'ar'; // Check if the language is Arabic
+
 
     const [show, setShow] = useState(false);
 
@@ -106,8 +113,24 @@ export default function UserPost() {
             </button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Users</Modal.Title>
+                <Modal.Header
+                    closeButton
+                    style={{
+                        flexDirection: isRtl ? 'row-reverse' : 'row', // Reverse row direction for RTL
+                        justifyContent: 'space-between', // Ensure proper spacing
+                        alignItems: 'center', // Vertically center items
+                    }}
+                >
+                    <Modal.Title
+                        style={{
+                            margin: 0,
+                            textAlign: isRtl ? 'right' : 'left', // Align text direction dynamically
+                            flex: 1, // Take up available space
+                            marginRight: '10px'
+                        }}
+                    >
+                        {t('user')}
+                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
 
@@ -119,7 +142,7 @@ export default function UserPost() {
 
 
                                     {/* content page */}
-                                    <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>User Post Form</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontSize: '22px' }}>{t('user_P_f')}</Typography>
                                     <FormControl variant="standard" sx={{ margin: 1, width: "100%", gap: '10px' }} >
                                         <TextField
                                             required
@@ -140,7 +163,7 @@ export default function UserPost() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: err ? 'red' : '', 
+                                                        borderColor: err ? 'red' : '',
                                                     },
                                                 },
                                             }}

@@ -9,12 +9,20 @@ import axios from 'axios';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 
-import { Alert, Box, FormControl, Stack, TextField, Typography } from '@mui/material';
+import { Box, FormControl, TextField, Typography } from '@mui/material';
 
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import useLanguage from '../../reusible/useLanguage';
+
+
 export default function OrderPost({ handleRefreshData }) {
+
+
+    const { t, i18n } = useLanguage();
+    const isRtl = i18n.language === 'ar'; // Check if the language is Arabic
+
 
     const [show, setShow] = useState(false);
 
@@ -200,18 +208,34 @@ export default function OrderPost({ handleRefreshData }) {
             </button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Orders</Modal.Title>
+                <Modal.Header
+                    closeButton
+                    style={{
+                        flexDirection: isRtl ? 'row-reverse' : 'row', // Reverse row direction for RTL
+                        justifyContent: 'space-between', // Ensure proper spacing
+                        alignItems: 'center', // Vertically center items
+                    }}
+                >
+                    <Modal.Title
+                        style={{
+                            margin: 0,
+                            textAlign: isRtl ? 'right' : 'left', // Align text direction dynamically
+                            flex: 1, // Take up available space
+                            marginRight: '10px'
+                        }}
+                    >
+                        {t('order')}
+                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
                         <div class="container-fluid py-4">
                             <div class="row">
-                             
+
 
                                 {/* content page */}
-                                <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Order Post Form</Typography>
+                                <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontSize: '22px' }}>{t('order_P_f')}</Typography>
                                 <FormControl variant="standard" sx={{ margin: 1, width: "90%", gap: '10px', marginLeft: '23px' }} >
                                     <Select
                                         options={orders.map(order => ({ value: order.id, label: order.name }))} isMulti value={selectedOrders} onChange={setSelectedOrders} />
@@ -301,7 +325,7 @@ export default function OrderPost({ handleRefreshData }) {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgPro_id ? 'red' : '', 
+                                                    borderColor: errmsgPro_id ? 'red' : '',
                                                 },
                                             },
                                         }}
@@ -332,7 +356,7 @@ export default function OrderPost({ handleRefreshData }) {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgStatus ? 'red' : '', 
+                                                    borderColor: errmsgStatus ? 'red' : '',
                                                 },
                                             },
                                         }}
@@ -344,7 +368,7 @@ export default function OrderPost({ handleRefreshData }) {
                                     }
                                 </FormControl>
 
-                            
+
                             </div>
 
                         </div>

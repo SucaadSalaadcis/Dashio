@@ -8,9 +8,13 @@ import BackIcon from '../../reusible/BackIcon';
 import { HashLoader } from 'react-spinners';
 
 
-
+import useLanguage from '../../reusible/useLanguage';
 
 export default function ProductView() {
+
+    const { t, i18n } = useLanguage();
+
+
 
     const getToken = () => {
         return Cookies.get('token');
@@ -60,7 +64,7 @@ export default function ProductView() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/products'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>Product View Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22px' }} className='pb-[20px] text-center'>{t('product_V_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

@@ -13,9 +13,12 @@ import { Box, FormControl, Paper, TextField, Typography } from '@mui/material';
 import BackIcon from "../../reusible/BackIcon";
 import { HashLoader } from "react-spinners";
 
-
+import useLanguage from '../../reusible/useLanguage';
 
 export default function OrderView() {
+
+    const { t, i18n } = useLanguage();
+  
 
 
     const getToken = () => Cookies.get('token');
@@ -144,7 +147,7 @@ export default function OrderView() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/orders'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Order View Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', marginBottom: '20px', textAlign: 'center', fontSize: '22px' }}>{t('order_V_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

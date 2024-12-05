@@ -10,10 +10,15 @@ import {
     HashLoader
 } from 'react-spinners';
 
+import useLanguage from '../../reusible/useLanguage';
 
-// import BackIcon from '../reusible/BackIcon';
+
 
 export default function AgentView() {
+
+    const { t, i18n } = useLanguage();
+
+
 
     const getToken = () => {
         return Cookies.get('token');
@@ -68,7 +73,7 @@ export default function AgentView() {
                         <Paper elevation={3} style={{ padding: '60px', borderRadius: '8px' }}>
                             <BackIcon pathUrl={'/agents'} />
                             {/* content page */}
-                            <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }} className='pb-[20px] text-center'>Agent View Form</Typography>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '22px' }} className='pb-[20px] text-center'>{t('agent_V_f')}</Typography>
                             {
                                 loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}>

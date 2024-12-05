@@ -31,5 +31,20 @@
     "pagin_text2": "ilaa",
     "pagin_text3": "ee",
     "pagin_text4": "kujirta",
-    "search": "raadi:"
+    "search": "raadi:",
+    "agent_p_f": "Foomka Gudbinta Wakiilka",
+    "cust_p_f": " Foomka Gudbinta Macmiilka",
+    "order_P_f": "Foomka Gudbinta Dalabka",
+    "product_P_f": " Foomka Gudbinta Alaabta",
+    "user_P_f": "Foomka Gudbinta Isticmaalaha",
+    "agent_E_f": "Foomka Wax-ka-beddelka Wakiilka",
+    "cust_E_f": "Foomka Wax-ka-beddelka Macmiilka",
+    "order_E_f": "Foomka Wax-ka-beddelka Dalabka",
+    "product_E_f": "Foomka Wax-ka-beddelka Alaabta",
+    "user_E_f": "Foomka Wax-ka-beddelka Isticmaalaha",
+    "agent_V_f": "Foomka Muuqaalka Wakiilka",
+    "cust_V_f": "Foomka Muuqaalka Macmiilka",
+    "order_V_f": "Foomka Muuqaalka Dalabka",
+    "product_V_f": "Foomka Muuqaalka Alaabta",
+    "user_V_f": "Foomka Muuqaalka Isticmaalaha"
 }
