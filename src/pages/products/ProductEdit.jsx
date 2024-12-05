@@ -124,7 +124,7 @@ export default function ProductEdit() {
                                         required
                                         autoComplete='off'
                                         id="outlined-required"
-                                        label="Name"
+                                        label={t('p_name')}
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         onBlur={validateName}
@@ -144,7 +144,7 @@ export default function ProductEdit() {
                                     <TextField
                                         required
                                         id="outlined-required"
-                                        label="Price"
+                                        label={t('price')}
                                         value={price}
                                         onChange={(e) => setPrice(e.target.value)}
                                         sx={{
@@ -163,7 +163,7 @@ export default function ProductEdit() {
                                     <TextField
                                         required
                                         id="outlined-required"
-                                        label="Commission"
+                                        label={t('commission')}
                                         value={commission}
                                         onChange={(e) => setCommission(e.target.value)}
                                         sx={{

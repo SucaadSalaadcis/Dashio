@@ -189,7 +189,7 @@ export default function CustomerPost() {
                                             required
                                             autoComplete='off'
                                             id="outlined-required"
-                                            label="Full Name"
+                                            label={t('fullname')}
                                             value={fullname}
                                             onChange={(e) => setFullName(e.target.value)}
                                         />
@@ -198,7 +198,7 @@ export default function CustomerPost() {
                                             autoComplete='off'
                                             id="outlined-required"
                                             type='number'
-                                            label="Phone"
+                                            label={t('phone')}
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
 
@@ -207,7 +207,7 @@ export default function CustomerPost() {
                                             required
                                             autoComplete='off'
                                             id="outlined-required"
-                                            label="Address"
+                                            label={t('address')}
                                             value={address}
                                             onChange={(e) => setAddress(e.target.value)}
                                         />

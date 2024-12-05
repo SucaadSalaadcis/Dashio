@@ -50,5 +50,19 @@
     "close": "Xir",
     "save_changes": "Keydi Isbeddelada",
     "back": "Dib u noqo",
-    "update": "Cusbooneysiin"
+    "update": "Cusbooneysiin",
+    "edit": "Wax-ka-beddel",
+    "del": "Tirtir",
+    "view": "Arag",
+    "fullname": "Magaca Buuxa",
+    "description": "Fahfahin",
+    "business": "Ganacsi",
+    "phone": "Telefoon",
+    "address": "Cinwaan",
+    "p_name": "Magaca",
+    "price": "Qiimaha",
+    "commission": "Komishanka",
+    "email": "Iimail",
+    "pass": "Erayga sirta",
+    "role": "Doorka"
 }

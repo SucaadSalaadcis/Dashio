@@ -153,7 +153,7 @@ export default function ProductPost() {
                                             required
                                             autoComplete="off"
                                             id="name-field"
-                                            label="Name"
+                                            label={t('p_name')}
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                             sx={{
@@ -173,7 +173,7 @@ export default function ProductPost() {
                                             required
                                             autoComplete="off"
                                             id="price-field"
-                                            label="Price"
+                                            label={t('price')}
                                             value={price}
                                             onChange={(e) => setPrice(e.target.value)}
                                             sx={{
@@ -193,7 +193,7 @@ export default function ProductPost() {
                                             required
                                             autoComplete="off"
                                             id="commission-field"
-                                            label="Commission"
+                                            label={t('commission')}
                                             value={commission}
                                             onChange={(e) => setCommission(e.target.value)}
                                             sx={{

@@ -180,7 +180,7 @@ export default function CustomerEdit() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Full Name"
+                                            label={t('fullname')}
                                             type='text'
                                             value={fullname}
                                             autoComplete='off'
@@ -196,7 +196,7 @@ export default function CustomerEdit() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Phone"
+                                            label={t('phone')}
                                             autoComplete='off'
                                             // type='number'
                                             value={phone}
@@ -219,7 +219,7 @@ export default function CustomerEdit() {
                                             required
                                             autoComplete='off'
                                             id="outlined-required"
-                                            label="Address"
+                                            label={t('address')}
                                             value={address}
                                             onChange={(e) => setAddress(e.target.value)}
                                             sx={{

@@ -149,16 +149,16 @@ function AgentPost() {
                                             required
                                             autoComplete="off"
                                             id="fullname"
-                                            label="Full Name"
+                                            label={t('fullname')}
                                             value={fullname}
-
                                             onChange={(e) => setFullName(e.target.value)}
+    
                                         />
                                         <TextField
                                             required
                                             autoComplete="off"
                                             id="description"
-                                            label="Description"
+                                            label={t('description')}
                                             value={description}
                                             onChange={(e) => setDescription(e.target.value)}
                                         />
@@ -166,7 +166,7 @@ function AgentPost() {
                                             required
                                             autoComplete="off"
                                             id="business"
-                                            label="Business"
+                                            label={t('business')}
                                             value={business}
                                             onChange={(e) => setBusiness(e.target.value)}
                                         />
@@ -175,7 +175,7 @@ function AgentPost() {
                                             required
                                             autoComplete="off"
                                             id="phone"
-                                            label="Phone"
+                                            label={t('phone')}
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
 
@@ -201,7 +201,7 @@ function AgentPost() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                     {t('close')}
+                        {t('close')}
                     </Button>
 
                     <Button
@@ -213,7 +213,7 @@ function AgentPost() {
                         }}
                         onClick={handlePost}
                     >
-                       {t('save_changes')}
+                        {t('save_changes')}
                     </Button>
                 </Modal.Footer>
             </Modal>

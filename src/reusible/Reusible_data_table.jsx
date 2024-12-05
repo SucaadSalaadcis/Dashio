@@ -257,7 +257,7 @@ const ReusableDataTable = ({ title, columns, url, }) => {
                                                     <li><a class="dropdown-item">  <View veiwParam={row.id} /></a></li>
                                                     <li><a class="dropdown-item">  <Edit EditParam={row.id} /></a></li>
                                                     <li><a class="dropdown-item"> <p style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}
-                                                        onClick={() => handleDelete(row.id)} >Delete</p></a>
+                                                        onClick={() => handleDelete(row.id)} >{t('del')}</p></a>
                                                     </li>
                                                 </ul>
                                             </div>

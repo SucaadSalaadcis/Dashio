@@ -85,21 +85,21 @@ export default function CustomerView() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Full Name"
+                                            label={t('fullname')}
                                             value={fullname}
                                             onChange={(e) => setFullName(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Phone"
+                                            label={t('phone')}
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Address"
+                                            label={t('address')}
                                             value={address}
                                             onChange={(e) => setAddress(e.target.value)}
                                         />

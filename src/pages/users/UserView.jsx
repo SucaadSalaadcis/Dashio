@@ -85,14 +85,14 @@ export default function UserView() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Name"
+                                            label={t('p_name')}
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Email"
+                                            label={t('email')}
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />

@@ -92,28 +92,28 @@ export default function AgentView() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Full Name"
+                                            label={t('fullname')}
                                             value={fullname}
                                             onChange={(e) => setFullName(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Description"
+                                            label={t('description')}
                                             value={description}
                                             onChange={(e) => setDescription(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Business"
+                                            label={t('business')}
                                             value={business}
                                             onChange={(e) => setBusiness(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Phone"
+                                            label={t('phone')}
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
                                         />

@@ -17,9 +17,13 @@ const pathMap = [
 ];
 
 
+import useLanguage from "./useLanguage";
+import { t } from "i18next";
 
 // edit functionallity
 export function Edit({ EditParam }) {
+
+    const { t } = useLanguage();
 
     const location = useLocation();
 
@@ -33,7 +37,7 @@ export function Edit({ EditParam }) {
     return (
         <Link to={url} style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}>
             {/* <EditIcon style={{ color: 'blue' }} /> */}
-            <p>Edit</p>
+            <p>{t('edit')}</p>
         </Link>
     )
 }
@@ -53,37 +57,9 @@ export function View({ veiwParam }) {
     return (
         <Link to={url} style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}>
             {/* <VisibilityIcon style={{ color: "green", marginLeft: '8px' }} /> */}
-            <p>View</p>
+            <p>{t('view')}</p>
         </Link>
     )
 }
 
-
-// add functionallity
-export function Add() {
-
-    const location = useLocation();
-
-    const match = pathMap.find(item => item.path === location.pathname);
-    // console.log(match)
-    if (!match) return null;
-
-    // Construct 
-    const url = `/${match.endpoint}`;
-
-    return (
-        <Box
-            sx={{
-                display: 'flex',
-                justifyContent: 'flex-end',  // Push to the right
-                width: '100%',
-            }}>
-            <Link to={url}>
-                <Button variant='contained' sx={{ backgroundColor: '#E53270' }}>
-                    ADD
-                </Button>
-            </Link>
-        </Box>
-    )
-}
 

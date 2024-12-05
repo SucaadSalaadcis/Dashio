@@ -138,7 +138,7 @@ export default function UserEdit() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Name"
+                                            label={t('p_name')}
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                             sx={{
@@ -152,7 +152,7 @@ export default function UserEdit() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Email"
+                                            label={t('email')}
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             sx={{
@@ -166,7 +166,7 @@ export default function UserEdit() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Password"
+                                            label={t('pass')}
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
                                             sx={{
@@ -180,7 +180,7 @@ export default function UserEdit() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Role"
+                                            label={t('role')}
                                             value={role}
                                             onChange={(e) => setRole(e.target.value)}
                                             sx={{

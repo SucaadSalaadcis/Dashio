@@ -148,7 +148,7 @@ export default function UserPost() {
                                             required
                                             autoComplete='off'
                                             id="outlined-required"
-                                            label="Name"
+                                            label={t('p_name')}
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                         />
@@ -156,7 +156,7 @@ export default function UserPost() {
                                             required
                                             autoComplete='off'
                                             id="outlined-required"
-                                            label="Email"
+                                            label={t('email')}
                                             value={email}
                                             error={err} // This adds the red border automatically if `err` is true
                                             // helperText={err ? "Password is required" : ""} // Displays an error message if `err` is true
@@ -178,7 +178,7 @@ export default function UserPost() {
                                             required
                                             autoComplete="off"
                                             id="outlined-required"
-                                            label="Password"
+                                            label={t('pass')}
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
 
@@ -188,7 +188,7 @@ export default function UserPost() {
                                             required
                                             autoComplete='off'
                                             id="outlined-required"
-                                            label="Role"
+                                            label={t('role')}
                                             value={role}
                                             onChange={(e) => setRole(e.target.value)}
                                         />

@@ -83,21 +83,21 @@ export default function ProductView() {
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Name"
+                                            label={t('p_name')}
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Price"
+                                            label={t('price')}
                                             value={price}
                                             onChange={(e) => setPrice(e.target.value)}
                                         />
                                         <TextField
                                             required
                                             id="outlined-required"
-                                            label="Commission"
+                                            label={t('commission')}
                                             value={commission}
                                             onChange={(e) => setCommission(e.target.value)}
                                         />

@@ -48,8 +48,25 @@
     "product_V_f": "Product View Form",
     "user_V_f": "User View Form",
     "close": "Close",
+    "update" : "Update",
     "save_changes" : "Save Changes",
     "back" : "Back",
-    "update" : "Update"
+    "edit" : "Edit",
+    "del" : "Delete",
+    "view" : "View",
+    "fullname": "Full Name",
+    "description": "Description",
+    "business": "Business",
+    "phone": "Phone",
+    "address": "Address",
+    "p_name": "Name",
+    "price": "Price",
+    "commission": "Commission",
+    "email": "Email",
+    "pass": "Password",
+    "role": "Role"
+
+    
+
     
 }
