@@ -253,7 +253,7 @@ export default function CustomerPost() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        {t('close')}
                     </Button>
 
                     <Button
@@ -265,7 +265,7 @@ export default function CustomerPost() {
                         }}
                         onClick={handlePost}
                     >
-                        Save Changes
+                        {t('save_changes')}
                     </Button>
                 </Modal.Footer>
             </Modal>

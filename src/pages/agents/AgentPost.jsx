@@ -201,7 +201,7 @@ function AgentPost() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                     {t('close')}
                     </Button>
 
                     <Button
@@ -213,7 +213,7 @@ function AgentPost() {
                         }}
                         onClick={handlePost}
                     >
-                        Save Changes
+                       {t('save_changes')}
                     </Button>
                 </Modal.Footer>
             </Modal>

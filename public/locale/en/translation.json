@@ -46,5 +46,7 @@
     "cust_V_f": "Customer View Form",
     "order_V_f": "Order View Form",
     "product_V_f": "Product View Form",
-    "user_V_f": "User View Form"
+    "user_V_f": "User View Form",
+    "close": "Close",
+    "save_changes" : "Save Changes"
 }

@@ -376,7 +376,7 @@ export default function OrderPost({ handleRefreshData }) {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                    {t('close')}
                     </Button>
 
                     <Button
@@ -388,7 +388,7 @@ export default function OrderPost({ handleRefreshData }) {
                         }}
                         onClick={postOrderData}
                     >
-                        Save Changes
+                       {t('save_changes')}
                     </Button>
                 </Modal.Footer>
             </Modal>
