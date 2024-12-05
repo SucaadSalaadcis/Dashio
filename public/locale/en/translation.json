@@ -48,5 +48,8 @@
     "product_V_f": "Product View Form",
     "user_V_f": "User View Form",
     "close": "Close",
-    "save_changes" : "Save Changes"
+    "save_changes" : "Save Changes",
+    "back" : "Back",
+    "update" : "Update"
+    
 }

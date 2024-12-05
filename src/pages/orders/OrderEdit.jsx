@@ -28,7 +28,8 @@ import useLanguage from '../../reusible/useLanguage';
 export default function OrderEdit() {
 
     const { t, i18n } = useLanguage();
-  
+    const isRtl = i18n.language === 'ar';
+
     const getToken = () => Cookies.get('token');
 
     // State management
@@ -248,7 +249,7 @@ export default function OrderEdit() {
 
             <div class="container-fluid py-4">
                 <div class="row">
-                  
+
                     {/* content page */}
                     <Paper elevation={3} style={{ padding: '70px', borderRadius: '8px' }}>
                         <BackIcon pathUrl={'/orders'} />
@@ -353,7 +354,7 @@ export default function OrderEdit() {
                                         sx={{
                                             '& .MuiOutlinedInput-root': {
                                                 '& fieldset': {
-                                                    borderColor: errmsgStatus ? 'red' : '', 
+                                                    borderColor: errmsgStatus ? 'red' : '',
                                                 },
                                             },
                                         }}
@@ -366,13 +367,29 @@ export default function OrderEdit() {
 
                                 </FormControl>
                             )}
-                        <Box display="flex" justifyContent="flex-end" mt={2}>
-                            <Button variant="contained"
+                        <Box
+                            display="flex"
+                            justifyContent={isRtl ? 'flex-start' : 'flex-end'}
+                            mt={2}
+                        >
+                            <Button
+                                variant="contained"
                                 startIcon={<EditIcon />}
-                                style={{ backgroundColor: '#3A57E8 ', paddingRight: '25px', color: 'white' }}
+                                style={{
+                                    backgroundColor: '#3A57E8',
+                                    color: 'white',
+                                }}
                                 onClick={handleUpdate}
                             >
-                                Update
+                                <p
+                                    style={{
+                                        direction: isRtl ? 'rtl' : 'ltr',
+                                        margin: 0,
+                                        marginRight: '10px'
+                                    }}
+                                >
+                                    {t('update')}
+                                </p>
                             </Button>
                         </Box>
 

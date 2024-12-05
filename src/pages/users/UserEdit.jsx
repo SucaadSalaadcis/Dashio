@@ -17,7 +17,8 @@ import useLanguage from '../../reusible/useLanguage';
 export default function UserEdit() {
 
     const { t, i18n } = useLanguage();
-  
+    const isRtl = i18n.language === 'ar';
+
 
 
     const getToken = () => {
@@ -185,7 +186,7 @@ export default function UserEdit() {
                                             sx={{
                                                 '& .MuiOutlinedInput-root': {
                                                     '& fieldset': {
-                                                        borderColor: errmsg ? 'red' : '', 
+                                                        borderColor: errmsg ? 'red' : '',
                                                     },
                                                 },
                                             }}
@@ -197,16 +198,31 @@ export default function UserEdit() {
                                         }
                                     </FormControl>
                                 )}
-                            <Box display="flex" justifyContent="flex-end" mt={2}>
-                                <Button variant="contained"
+                            <Box
+                                display="flex"
+                                justifyContent={isRtl ? 'flex-start' : 'flex-end'}
+                                mt={2}
+                            >
+                                <Button
+                                    variant="contained"
                                     startIcon={<EditIcon />}
-                                    style={{ backgroundColor: '#3A57E8 ', paddingRight: '25px', color: 'white' }}
+                                    style={{
+                                        backgroundColor: '#3A57E8',
+                                        color: 'white',
+                                    }}
                                     onClick={handleUpdate}
                                 >
-                                    Update
+                                    <p
+                                        style={{
+                                            direction: isRtl ? 'rtl' : 'ltr',
+                                            margin: 0,
+                                            marginRight: '10px'
+                                        }}
+                                    >
+                                        {t('update')}
+                                    </p>
                                 </Button>
                             </Box>
-
                         </Paper>
                     </div>
                 </div>
