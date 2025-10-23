@@ -200,7 +200,7 @@ const SignIn = () => {
                                 border: 'none',
                                 borderRadius: '5%',
                             }}
-                            placeholder="xyz@example.com"
+                            placeholder="admin@admin.com"
                             onChange={(e) => setEmail(e.target.value)}
 
                         />
@@ -227,7 +227,7 @@ const SignIn = () => {
                             backgroundColor: '#F9F9F9',
                             border: 'none',
                             borderRadius: '5%',
-                        }} type="password" placeholder="xxxx"
+                        }} type="password" placeholder="password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
